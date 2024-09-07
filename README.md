@@ -27,3 +27,28 @@ Válasz:
 }
 ```
 
+### Audio captcha lekérése
+
+method: `GET`
+
+```
+/api/Account/CaptchaAudio?identifier={captcha uuid}&lcid=1038
+```
+
+### Login
+
+method: `POST`
+
+```
+/api/Account/Authenticate
+```
+data:
+```
+{
+  "userName": "{felhasználó név}",
+  "password": "{jelszó}",
+  "captcha": "{captcha megoldása}",
+  "captchaIdentifier": "{captcha uuid}",
+  "LCID": 1038
+}
+```
